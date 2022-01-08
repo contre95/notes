@@ -1,0 +1,26 @@
+[book]
+authors = ["contre95"]
+language = "en"
+multilingual = true
+src = "src"
+title = "Lucas Contre"
+
+
+[output.html]
+#theme = "my-theme"
+default-theme = "ayu"
+preferred-dark-theme = "ayu"
+#no-section-label = false
+git-repository-url = "https://github.com/contre95/notes"
+git-repository-icon = "fa-note"
+edit-url-template = "https://github.com/contre95/notes/edit/master/guide/{path}"
+#site-url = "/example-book/"
+cname = "notes.lucascontre.site"
+
+[output.html.print]
+enable = true
+
+[output.html.fold]
+enable =  false # whether or not to enable section folding
+level = 1         # the depth to start folding
+
