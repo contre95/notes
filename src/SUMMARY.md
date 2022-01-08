@@ -16,4 +16,3 @@
      - [Which Linux Distro ?](tech/concepts/linux/which-distro.md)
      - [Interesting Links](tech/concepts/links.md)
 - [Writtings](writtings/README.md)
-[Blog](https://blog.lucascontre.site)
