@@ -24,7 +24,7 @@ With **Netstats**
 lsof -i :80
 ```
 
-## Nmap
+## nmap
 
 ### Simply scan a network or host
 
