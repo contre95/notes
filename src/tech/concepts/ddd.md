@@ -352,5 +352,21 @@ There are times when a Factory is not needed, and a simple constructor is enough
 - The client is interested in the implementation, perhaps wants to choose the Strategy used.
 - The class is the type. There is no hierarchy involved, so no need to choose between a list of concrete implementations.
 
-Another observation is that Factories need to create new objects from scratch, or they are required to reconstitute objects which previously existed, but have been probably persisted to a database. Bringing Entities back into memory from their resting place in a database involves a completely different process than creating a new one. One obvious difference is that the new object does not need a new identity.
+Another observation is that Factories need to create new objects from scratch, or they are required to reconstitute objects which previously existed, but have been probably persisted to a database. Bringing Entities back into memory from their resting place in a database involves a completely different process than creating a new one. One obvious difference is that the new object does not need a new identity
+
+## Repositories
+
+The purpose of a Repository is to encapsulate all the logic needed to obtain object references. The domain objects won’t have to deal with the infrastructure to get the needed references to other objects of the domain.  They will just get them from the Repository and the model is regaining its clarity and focus. 
+
+The Repository may store references to some of the objects. When an object is created, it may be saved in the Repository, and retrieved from there to be used later.  If the client requested an object from the Repository, and the Repository does not have it, it may get it from the storage. Either way, the Repository acts as a storage place for globally accessible objects. 
+
+The Repository may also include a Strategy. It may access one persistence storage or another based on the specified Strategy. It may use different storage locations for different type of objects. The overall effect is that the domain model is decoupled from the need of storing objects or their references, and accessing  
+
+Provide Repositories only for aggregate roots the that actually need direct access.
+
+A Repository may contain detailed information used to access the infrastructure, but its interface should be simple. A Repository should have a set of methods used to retrieve objects. The client calls such a method and passes one or more
+
+There is a relationship between Factory and Repository. They are both patterns of the model-driven design, and they both help us to manage the life cycle of domain objects. While the Factory is concerned with the creation of objects, the Repository takes care of already existing objects. The Repository may cache objects locally, but most often it needs to retrieve them from a persistent storage. Objects are either created using a constructor or they are passed to a Factory to be constructed. For this reason, the Repository may be seen as a Factory, because it creates  objects. It is not a creation from scratch, but a reconstitution of an object which existed. We should not mix a Repository with a Factory. The Factory should create new objects, while the Repository should find already created objects. When a new object is to be added to the Repository, it should be created first using the Factory, and then it should be given to the Repository which will store it like in the example below.    
+
+Another way this is noted is that Factories are "pure domain", but that Repositories can contain links to the infrastructure, eg. the database.
 
