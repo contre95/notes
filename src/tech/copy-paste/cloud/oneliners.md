@@ -32,6 +32,19 @@ aws ssm create-activation \
   --iam-role service-role/AmazonEC2RunCommandRoleForManagedInstances
 ```
 
+### AWS Export (just some) <Service> properties to <FORMAT>
+
+
+Export VPC Flowlogs' FlowLogId,ResourceId... to JSON
+```bash
+aws ec2 describe-flow-logs --query "FlowLogs[].[FlowLogId,ResourceId,LogFormat]" 
+```
+
+Export VPC's VpcId and State to CSV
+```bash
+aws ec2 describe-vpcs | jq '.Vpcs[] | "\(.VpcId), \(.State)"'`
+```
+
 ### AWS Delete all SSM activations
 
 There's no current way to select a bunch of activation and swipe them all at once (You must have `jq` installed)
