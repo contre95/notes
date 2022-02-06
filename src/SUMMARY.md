@@ -11,6 +11,7 @@
       - [Domain Driven Design](tech/concepts/ddd.md)
       - [Concepts](tech/concepts/software-arch.md)
     - [Which Linux Distro ?](tech/concepts/linux/which-distro.md)
+    - [Software Philosphy](tech/concepts/philosphy.md)
     <!--- [Interesting Links](tech/concepts/links.md)-->
   - [Copy/Paste](tech/copy-paste/README.md)
     - [Cloud](tech/copy-paste/cloud/oneliners.md)

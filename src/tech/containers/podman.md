@@ -21,4 +21,8 @@ and how the different UID and GUID are mapped between [namespaces]().
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Ac2boGEz2ww" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+Here's a list that categorize the known issues and irregularities when running
+podman as rootless:
+
+[https://github.com/containers/podman/blob/main/rootless.md](https://github.com/containers/podman/blob/main/rootless.md)
 
