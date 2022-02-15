@@ -1,0 +1,46 @@
+## Designing Abstractions
+- The most fundamental element of computer science:
+  - NOT algorithm design! Computers are fast enough to eliminate algorithmic considerations from most programming tasks.
+  - The most important problem is managing complexity:
+    - Technology allows us to build systems much larger than we can understand.
+    - Biggest impediment to building computer systems is our ability to understand them.
+    - Software complexity increases over time, system becomes brittle (changes too expensive or too dangerous).
+  - Fundamental problem in computer science: decompose complex problems and systems into smaller units that can be understood in isolation.
+  - I use the term "abstraction" to refer to these units.
+- "Sweet" abstractions:
+  - Minimum surface area for maximum volume: simple interface hides a lot of implementation complexity.
+  - Easy to use:
+    - Less code to type
+    - Less to learn
+  - Easy to make changes: impact of changes will be isolated inside an abstraction.
+  - Reusability:
+    - Same abstraction can be reused for many different tasks.
+    - Abstraction provides a framework that allows many other components to be incorporated or work together.
+  - Sometimes called "information hiding" or "separation of concerns":
+    - Hide design decisions, such as a complex algorithm or data structure, behind a simple interface.
+- How to find the sweet spot?
+  - Facts precede concepts: examine a lot of code, look for common tasks.
+  - Separate the common case:
+    - Powerful interfaces eventually need a lot of features, but most of them aren't used very often.
+    - Identify the common case: "what's the simplest it can possibly be?"
+    - First make the common case as simple as possible, then find a way to support the special cases without complicating the common case:
+      - Optional arguments
+      - Additional methods to handle special cases
+    - Make it easy to learn the common case without having to learn about fancy features; pick up the optional features one at a time, as needed.
+  - Avoid classitis: more interfaces are not necessarily better!
+    - Don't force people to use interfaces that aren't relevant for the common case.
+    - Define the highest-level, most useful interfaces first; then fill in the intermediate interfaces if needed.
+  - Allow customization/extension, but don't require it!
+    - Provide good defaults.
+  - Minimize error handling:
+    - Define errors out of existence.
+    - Centralized error handling: hide errors that can't normally be recovered from.
+  - Don't introduce restrictions just because you can't imagine a reasonable use case
+    - Getting rid of restrictions simplifies the interface.
+  - Are there things that nearly everyone will want? If so, just build them in automatically; don't make people ask for them.
+- Some additional thoughts:
+  - A great abstraction will be used in ways you never anticipated; don't assume you can anticipate all of the uses.
+  - Move suffering inside the abstraction.
+  - Hard for really smart people to design sweet interfaces because things don't seem complicated to them.
+  - Plan on revisions: the first attempt is rarely sweet.
+  - Sweat the details: the difference between a great abstraction and a clumsy one is often dozens of things each of which seems trivial.
