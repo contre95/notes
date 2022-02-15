@@ -1,19 +1,20 @@
 # Summary
 
 [Introduction](README.md)
-
 - [Techonology](tech/README.md)
-  - [Notes](tech/concepts/README.md)
-    - [Containers](tech/containers/README.md)
-      - [Podman](tech/containers/podman.md)
-    - [Software Architecture](tech/concepts/README.md)
-      - [Clean Architecture](tech/concepts/clean-arch.md)
-      - [Domain Driven Design](tech/concepts/ddd.md)
-      - [Concepts](tech/concepts/software-arch.md)
-    - [Which Linux Distro ?](tech/concepts/linux/which-distro.md)
-    - [Software Philosphy](tech/concepts/philosphy.md)
-    - [Designing Abstractions](tech/concepts/abstractions.md)
-    <!--- [Interesting Links](tech/concepts/links.md)-->
+  - [Notes](tech/notes/README.md)
+    - [Software Architecture](tech/notes/README.md)
+      - [Clean Architecture](tech/notes/clean-arch.md)
+      - [Domain Driven Design](tech/notes/ddd.md)
+      - [Interesting Laws](tech/notes/software-arch.md)
+    - [Linux](tech/notes/linux/README.md)
+      - [Capabilities](tech/notes/linux/README.md)
+      - [Containers](tech/notes/linux/containers/README.md)
+        - [Podman](tech/notes/linux/containers/podman.md)
+      - [Which Linux Distro ?](tech/notes/linux/which-distro.md)
+    - [Software Philosphy](tech/notes/philosphy.md)
+    - [Designing Abstractions](tech/notes/abstractions.md)
+    <!--- [Interesting Links](tech/notes/links.md)-->
   - [Copy/Paste](tech/copy-paste/README.md)
     - [Cloud](tech/copy-paste/cloud/oneliners.md)
     - [Containers](tech/copy-paste/containers/oneliners.md)
@@ -21,5 +22,4 @@
     - [Networking](tech/copy-paste/networking/oneliners.md)
     - [MySQL](tech/copy-paste/databases/mysql.md)
     - [Git](tech/copy-paste/git/git.md)
-- [Books](tech/README.md)
 [About me]()
