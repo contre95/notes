@@ -12,6 +12,7 @@
       - [Concepts](tech/concepts/software-arch.md)
     - [Which Linux Distro ?](tech/concepts/linux/which-distro.md)
     - [Software Philosphy](tech/concepts/philosphy.md)
+    - [Designing Abstractions](tech/concepts/abstractions.md)
     <!--- [Interesting Links](tech/concepts/links.md)-->
   - [Copy/Paste](tech/copy-paste/README.md)
     - [Cloud](tech/copy-paste/cloud/oneliners.md)
