@@ -8,7 +8,7 @@
     - [Software Architecture](tech/notes/software-arch/README.md)
       - [Clean Architecture](tech/notes/software-arch/clean-arch.md)
       - [Domain Driven Design](tech/notes/software-arch/ddd.md)
-      - [Interesting Laws](tech/notes/software-arch/lawsnprinciples.md)
+      - [Laws and Principle](tech/notes/software-arch/lawsnprinciples.md)
     - [Linux](tech/notes/linux/README.md)
       - [Capabilities](tech/notes/linux/README.md)
       - [Containers](tech/notes/linux/containers/README.md)
