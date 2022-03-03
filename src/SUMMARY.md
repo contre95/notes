@@ -19,6 +19,7 @@
     <!--- [Interesting Links](tech/notes/links.md)-->
   - [Copy/Paste](tech/copy-paste/README.md)
     - [Cloud](tech/copy-paste/cloud/oneliners.md)
+    - [Shell](tech/copy-paste/terminal/shell.md)
     - [Containers](tech/copy-paste/containers/oneliners.md)
     - [K8S](tech/copy-paste/cloud/k8s.md)
     - [Networking](tech/copy-paste/networking/oneliners.md)
