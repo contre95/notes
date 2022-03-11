@@ -2,6 +2,8 @@
 
 ## Regulating software practices
 
+Robert C. Martín
+
 An interesting analogy with doctors done by Uncle Bob with software engineers coming up with ways of regulating themselves.
 
 TODO: Find the video
@@ -14,6 +16,8 @@ An interesting take on the huge amount of abstraction with have to deal nowadays
 
 
 ## No silver bullet
+
+Frederick P. Brooks
 
 ```
 There is no single development, in either technology or management technique, 
