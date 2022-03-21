@@ -1,0 +1,51 @@
+# Systemd
+
+Systemd is a system and service manager for Linux operating systems. When run as first process on boot (as PID 1), it acts as init system that brings up and maintains userspace services. Separate instances are started for logged-in users to start their services.
+Systemd is usually not invoked directly by the user, but is installed as the /sbin/init symlink and started during early boot. The user manager instances are started automatically through the user@.service(5) service.
+
+
+# Unit files
+
+The unit files on your system determine how systemd will start and run. Each corresponds to a single activity or component — or unit in systemd terms. Each unit file is a simple text file describing a unit, what it does, what needs to run before or afterward, and other details.
+
+To see a list of all the unit files installed in the system.
+
+```shell
+systemctl list-unit-files
+```
+
+## System unit directories 
+(from the man page)
+
+The systemd system manager reads unit configuration from various directories. Packages that want to install unit files shall place them in the directory returned by `pkg-config systemd --variable=systemdsystemunitdir`. Other directories checked are `/usr/local/lib/systemd/system` and `/usr/lib/systemd/system`.
+User always take precedence. `pks-config systemd --variable=systemdsystemconfdir` returns the path of the system configuration directory
+
+Packages should alter the content of these directories only with the enable and disable commands of the systemctl(1) tool
+
+## User unit directories
+Applications should place their unit files in the directory returned by `pkg-config systemd --variable=systemduserunitdir`. Global configuration is done in the directory reported by `pkg-config systemd --variable=systemduserconfdir`. The enable and disable commands of the systemctl(1) tool can handle both global (i.e. for all users) and private (for one user) enabling/disabling of units.
+
+
+# Unit types
+
+There are numerous types of units systemd understands. The two most common for system owners to deal with are service units and target units. To list unit files on your system of each of these types, use the systemctl command:
+
+```shell
+systemctl list-unit-files --type service
+systemctl list-unit-files --type target
+```
+
+## Service units
+
+```shell
+sudo systemctl [command] NAME.service
+```
+
+Typical commands include:
+
+* **start**: starts a systemd unit
+* **stop**: attempts to “nicely” end a service
+* **status**: provides detailed information on a service
+* **restart**: restarts (stops and then starts) the specified service
+* **enable**: hooks (links) a unit to various places, for instance to run at boot
+* **disable**: unhooks (unlinks) a unit, so it is not activated
