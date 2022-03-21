@@ -37,6 +37,10 @@ systemctl list-unit-files --type target
 
 ## Service units
 
+One interesting feature of systemd is that it monitors processes it **starts with service units**.
+
+For example: `/usr/lib/systemd/system/sshd.service`
+
 ```shell
 sudo systemctl [command] NAME.service
 ```
@@ -49,3 +53,20 @@ Typical commands include:
 * **restart**: restarts (stops and then starts) the specified service
 * **enable**: hooks (links) a unit to various places, for instance to run at boot
 * **disable**: unhooks (unlinks) a unit, so it is not activated
+* **kill**: when a service refuse to cooperate :eyes:
+
+## Target units
+
+Target units are used to link and group other units together to describe a desired system state. Some of these units may be services. Others may be additional target units with their own groups of units.
+
+
+Example 1. Simple standalone target
+
+ ```toml
+ # emergency-net.target
+ [Unit]
+ Description=Emergency Mode with Networking
+ Requires=emergency.target systemd-networkd.service
+ After=emergency.target systemd-networkd.service
+ AllowIsolate=yes
+ ```
