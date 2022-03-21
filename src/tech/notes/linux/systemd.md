@@ -37,6 +37,10 @@ systemctl list-unit-files --type target
 
 ## Service units
 
+```shell
+man systemd.service
+```
+
 One interesting feature of systemd is that it monitors processes it **starts with service units**.
 
 For example: `/usr/lib/systemd/system/sshd.service`
@@ -59,17 +63,20 @@ Typical commands include:
 
 Target units are used to link and group other units together to describe a desired system state. Some of these units may be services. Others may be additional target units with their own groups of units.
 
+```shell
+man systemd.target
+```
 
 Example 1. Simple standalone target
 
- ```toml
- # emergency-net.target
- [Unit]
- Description=Emergency Mode with Networking
- Requires=emergency.target systemd-networkd.service
- After=emergency.target systemd-networkd.service
- AllowIsolate=yes
- ```
+```toml
+# emergency-net.target
+[Unit]
+Description=Emergency Mode with Networking
+Requires=emergency.target systemd-networkd.service
+After=emergency.target systemd-networkd.service
+AllowIsolate=yes
+```
 
 #### Source
 * These series of blog posts: https://fedoramagazine.org/what-is-an-init-system/
