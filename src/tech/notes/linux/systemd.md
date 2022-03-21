@@ -70,3 +70,7 @@ Example 1. Simple standalone target
  After=emergency.target systemd-networkd.service
  AllowIsolate=yes
  ```
+
+#### Source
+* These series of blog posts: https://fedoramagazine.org/what-is-an-init-system/
+* Systemd man pages: https://man7.org/linux/man-pages/man1/systemd.1.html
