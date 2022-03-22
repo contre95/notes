@@ -26,3 +26,15 @@ podman as rootless:
 
 [https://github.com/containers/podman/blob/main/rootless.md](https://github.com/containers/podman/blob/main/rootless.md)
 
+
+## Generate Unit file for systemd
+
+Once a container/pod is running you can generate an unit file for systemd with the following command:
+
+
+```bash
+podman generate systemd <pod/container-name> 
+```
+
+Note: Copying unit files to `/etc/systemd/system` and enabling it marks the unit file to be automatically started at boot. And similarly, copying a unit file to `$HOME/.config/systemd/user` and enabling it marks the unit file to be automatically started on user login.
+
