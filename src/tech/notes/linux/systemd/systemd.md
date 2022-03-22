@@ -1,8 +1,35 @@
 # Systemd
 
+
 Systemd is a system and service manager for Linux operating systems. When run as first process on boot (as PID 1), it acts as init system that brings up and maintains userspace services. Separate instances are started for logged-in users to start their services.
 Systemd is usually not invoked directly by the user, but is installed as the /sbin/init symlink and started during early boot. The user manager instances are started automatically through the user@.service(5) service.
 
+## Before systemd (SysV init)
+Before systemd, the init system used previously in Linux was called SysVinit. A script used to manage a service in SysVinit was known as a SysV init script, which were "*imperative*". Backwards compatibility for legacy scripts remains 99.9% intact with systemd.
+
+[Example for the sshd SysV init script](http://www.styma.org/SunAtHome/sample_files/sshd.html)
+
+Nowadays the Systemd unit files are "*declaratives*" and systemd simply
+interprets them and hanldes the initialization of the service. For example the sshd.service unit file
+
+Just `cat $(pkg-config systemd --variable=systemdsystemunitdir)/sshd.service` :
+
+```toml
+[Unit]
+Description=OpenSSH Daemon
+Wants=sshdgenkeys.service
+After=sshdgenkeys.service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/sshd -D
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+```
 
 # Unit files
 
