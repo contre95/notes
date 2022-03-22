@@ -45,7 +45,7 @@ systemctl list-unit-files
 (from the man page)
 
 The systemd system manager reads unit configuration from various directories. Packages that want to install unit files shall place them in the directory returned by `pkg-config systemd --variable=systemdsystemunitdir`. Other directories checked are `/usr/local/lib/systemd/system` and `/usr/lib/systemd/system`.
-User always take precedence. `pks-config systemd --variable=systemdsystemconfdir` returns the path of the system configuration directory
+User always take precedence. `pkg-config systemd --variable=systemdsystemconfdir` returns the path of the system configuration directory
 
 Packages should alter the content of these directories only with the enable and disable commands of the systemctl(1) tool
 
