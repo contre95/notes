@@ -9,12 +9,12 @@
     - [Domain Driven Design](tech/notes/software-arch/ddd.md)
     - [Laws and Principle](tech/notes/software-arch/lawsnprinciples.md)
   - [Linux](tech/notes/linux/README.md)
+    - [Which Linux Distro ?](tech/notes/linux/which-distro.md)
     - [Capabilities](tech/notes/linux/capabilities.md)
     - [Systemd](tech/notes/linux/systemd/systemd.md)
       - [Journal](tech/notes/linux/systemd/journalctl.md)
     - [Containers](tech/notes/linux/containers/README.md)
       - [Podman](tech/notes/linux/containers/podman.md)
-    - [Which Linux Distro ?](tech/notes/linux/which-distro.md)
   - [Software Philosphy](tech/notes/philosphy.md)
   - [Designing Abstractions](tech/notes/abstractions.md)
   <!--- [Interesting Links](tech/notes/links.md)-->
