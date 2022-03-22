@@ -85,6 +85,7 @@ Typical commands include:
 * **enable**: hooks (links) a unit to various places, for instance to run at boot
 * **disable**: unhooks (unlinks) a unit, so it is not activated
 * **kill**: when a service refuse to cooperate :eyes:
+* **is-enabled**: checks if a service is enabled
 
 ## Target units
 
