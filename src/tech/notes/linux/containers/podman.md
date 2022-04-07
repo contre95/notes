@@ -33,8 +33,12 @@ Once a container/pod is running you can generate an unit file for systemd with t
 
 
 ```bash
-podman generate systemd <pod/container-name> 
+podman generate systemd <pod/container-name>  --name 
 ```
 
-Note: Copying unit files to `/etc/systemd/system` and enabling it marks the unit file to be automatically started at boot. And similarly, copying a unit file to `$HOME/.config/systemd/user` and enabling it marks the unit file to be automatically started on user login.
-
+Note: 
+* Copying unit files to `/etc/systemd/system` and enabling it marks the unit file to be automatically started at boot. And similarly, copying a unit file to `$HOME/.config/systemd/user` and enabling it marks the unit file to be automatically started on user login.
+* As of Podman 4.0, if the pod was craeted with a `pod.yml` and `podman play kube` it's not possible to add the `--new` file to the systemd generated command 
+```
+Error: cannot use --new on pod "<container-id>": no create command found
+```
