@@ -16,6 +16,8 @@
     - [Containers](tech/notes/linux/containers/README.md)
       - [Podman](tech/notes/linux/containers/podman.md)
   - [Software Philosphy](tech/notes/philosphy.md)
+  - [Security](tech/notes/security.md)
+    - [TLS](tech/notes/security/tls.md)
   - [Designing Abstractions](tech/notes/abstractions.md)
   <!--- [Interesting Links](tech/notes/links.md)-->
 - [Copy/Paste](tech/copy-paste/README.md)
