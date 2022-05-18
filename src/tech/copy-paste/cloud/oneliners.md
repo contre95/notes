@@ -94,6 +94,18 @@ aws sts assume-role --role-arn "<ROLE_ARN>" --role-session-name PiruloeSssion > 
   rm -f keys.json.tmp
 ```
 
+### AWS Assume Role from CLI and set credentials (easier)
+
+```bash
+  set +x  # do not print credentials
+  export $(printf "AWS_ACCESS_KEY_ID=%s AWS_SECRET_ACCESS_KEY=%s AWS_SESSION_TOKEN=%s" \
+        $(aws sts assume-role \
+        --role-arn <ROLE_ARN> \
+        --role-session-name <SESSION_NAME> \
+        --query "Credentials.[AccessKeyId,SecretAccessKey,SessionToken]" \
+        --output text))
+```
+
 --- 
 ## Google Cloud Platform (GCP)
 
