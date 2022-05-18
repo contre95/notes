@@ -25,7 +25,12 @@ aws ec2 describe-snapshots --query 'Snapshots[].VolumeSize' --output text |
 ### Get a list of R53 records
 
 ```bash
-aws route53 list-hosted-zones | jq '.HostedZones[] | .Id' | awk -F"/" '{print $3}' | tr -d '"' | xargs -I{} aws route53 list-resource-record-sets --hosted-zone-id {} --query "ResourceRecordSets[?Type == 'A']" | jq '.[] .Name' | tr -d '\"' | sed 's/.$//'
+aws route53 list-hosted-zones |
+    jq '.HostedZones[] | .Id' |
+    awk -F"/" '{print $3}' |
+    tr -d '"' |
+    xargs -I{} aws route53 list-resource-record-sets --hosted-zone-id {} --query "ResourceRecordSets[?Type == 'A']" |
+    jq '.[] .Name' | tr -d '\"' | sed 's/.$//'
 ```
 
 ### Create SSM activations with Tags
