@@ -74,7 +74,7 @@ ensures that the model can actually be implemented.
 
 ### The building blocks of a Model Driven Design
 
-![Model Driven Design](img/2021-06-22-11-25-26.png)
+![Model Driven Design](../img/2021-06-22-11-25-26.png)
 
 
 ## Layered Architecture
@@ -137,7 +137,7 @@ not mean that it should contain a long list with all the attributes.  Attributes
 can be grouped in different objects. Attributes chosen to make up a V.O should
 form a conceptual whole.
  
-![Value Objects](img/2021-06-22-15-47-12.png)
+![Value Objects](../img/2021-06-22-15-47-12.png)
 
 ## Services
 
@@ -333,11 +333,11 @@ Therefore, shift the responsibility for creating instances of complex objects an
 
 A Factory Method is an object method which contains and hides knowledge necessary to create another object. This is very useful when a client wants to create an object which belongs to an Aggregate. The solution is to add a method to the Aggregate root, which takes care of the object creation, enforces all invariants, and returns a reference to that object, or to a copy of it.
 
-![Factories-1](img/2021-12-03-09-36-07.png)
+![Factories-1](../img/2021-12-03-09-36-07.png)
 
 There are times when the construction of an object is more complex, or when the creation of an object involves the creation of a series of objects. For example: the creation of an Aggregate. Hiding the internal construction needs of an Aggregate can be done in a separate Factory object which is dedicated to this task. Let’s consider the example of a program module which
 
-![](img/2021-12-03-09-39-42.png)
+![](../img/2021-12-03-09-39-42.png)
 
 The Route ID generator is used to create a unique identity for each route which is necessary for an Entity.
 

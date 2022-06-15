@@ -321,7 +321,7 @@ dictated by the behavior of the dependencies and the dependencies were dictated
 by that flow control.  When polymorphism brought into play, something very
 different can happen.
 
-![di](img/dependency_inversion.png)
+![di](../img/dependency_inversion.png)
 
 In `Figure 1` we can see the classical approach where Flow of control goes on
 the same direction as the dependency. `Figure 2`, shows us how *Object A* a
@@ -406,7 +406,7 @@ organizing the dependencies between them (DIP).
 Bellow we see an image that's fully explained on the book. I suggest reviewing
 this example in particularly.
 
-![financial ocp](img/financial_ocp.png)
+![financial ocp](../img/financial_ocp.png)
 
 If component A should be protected from changes in component B, then B depends
 on A. We wan the *Controller* to be protected from changes in the *Presenters*.
@@ -554,7 +554,7 @@ The REP and CCP are inclusive principles: Both tend to make components larger.
 The CRP is an exclusive principle, driving components to be smaller. It is the
 tension between these principles that good architects seek to resolve. 
 
-![Tensions Cohesion Diagram ](img/CohesionPrinciplesTensionDiagram.jpg)
+![Tensions Cohesion Diagram ](../img/CohesionPrinciplesTensionDiagram.jpg)
 
 An architect who focuses on just the REP and CRP will find that too many
 component are impacted when simple changes are made.. In contrast, and architect
@@ -604,15 +604,15 @@ increments.  For this strategy to work, there can be no cycles in the component
 dependency graph. It's a DAG (Directed Acyclic Graph).  Whenever we find a
 cyclic on the dependency graph (as seen in the figure between Entities and
 Authorizer) we should make sure to remove it.  ![Dependency
-Graph](img/DependencyGraph.jpg) To break the cycle we can take two
+Graph](../img/DependencyGraph.jpg) To break the cycle we can take two
 approaches.
 
 1. Apply the Dependency Inversion Principle (DIP). So we can make Authorizer
 depend on Entities and not the other way around.  ![DIP for Dependency
-Cycle](img/DependencyGraphDIP.jpeg)
+Cycle](../img/DependencyGraphDIP.jpeg)
 
 2. Create a new component that both Authorizer and Entities depend on.  ![New
-Component for Dependency Cycle](img/DependencyGraphNewComponent.jpeg)
+Component for Dependency Cycle](../img/DependencyGraphNewComponent.jpeg)
 
 ### TOP-DOWN Design The component dependency graph structure cannot be designed
 from the top down. It is not one of the first things about the system that is
@@ -1073,7 +1073,7 @@ there would be many business rule classes, many database interface classes, and
 many database access implementations. All of them, though, would follow roughly
 the same pattern.
 
-![Database Boundaries](img/db_boundaries.png)
+![Database Boundaries](../img/db_boundaries.png)
 
 Note the two arrows leaving the *DatabaseAccess* class. Those two arrows point
 away from the *DatabaseAccess* class. That means that none of these classes
@@ -1088,7 +1088,7 @@ The history history of software development technology is the story of how to
 conveniently create plugins to establish a scalable and maintainable system
 architecture. The core business rules are kept separate from, and independent
 of, those components that are either optional or that can be implemented in many
-different forms ![Plugin Arq](img/plugin_arch.png) Because the user
+different forms ![Plugin Arq](../img/plugin_arch.png) Because the user
 interface in this design is considered to be a plugin, we have made it possible
 to plug in many different kinds of user interfaces. They could be web based,
 client/server based, SOA based, Console based, or based on any other kind of
@@ -1350,7 +1350,7 @@ characteristics:
 * Independent of any external agency. In fact, your business rules don't know
   anything at all about the interfaces to the outside world.
 
-![Clean Arch](img/CleanArchitecture.jpg)
+![Clean Arch](../img/CleanArchitecture.jpg)
 
 ## The dependency rule
 
