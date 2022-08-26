@@ -25,3 +25,14 @@ pacman -Qtdq
 # Remove them
 sudo pacman -R $(pacman -Qtdq)
 ```
+
+### Clear Pacman cache
+Cache is usually located under `/var/cache`
+```
+# pacman's built-in option
+sudo pacman -Sc
+#To remove all cached versions of uninstalled packages, re-run paccache with u flag
+sudo paccache -ruk0
+# To keep only one most recent version
+sudo paccache -rk 1
+```
