@@ -12,6 +12,7 @@
     - [Which Linux Distro ?](tech/notes/linux/which-distro.md)
     - [Capabilities](tech/notes/linux/capabilities.md)
     - [Performance check](tech/notes/linux/checking-system-performance.md)
+    - [ssh](tech/notes/ssh/tunneling.md)
     - [Systemd](tech/notes/linux/systemd/systemd.md)
       - [Journal](tech/notes/linux/systemd/journalctl.md)
     - [Containers](tech/notes/linux/containers/README.md)
