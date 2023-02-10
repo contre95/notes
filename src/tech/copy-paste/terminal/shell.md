@@ -25,3 +25,8 @@ else
 	echo "'$1' is not a valid file"
 fi
 ```
+
+Remove all python package under pip freeze
+```shell
+ pip freeze | xargs -I {} pip uninstall -y {}
+```
