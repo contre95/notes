@@ -30,3 +30,9 @@ Remove all python package under pip freeze
 ```shell
  pip freeze | xargs -I {} pip uninstall -y {}
 ```
+
+## Get certs from website 
+
+```shell
+openssl s_client -showcerts -verify 5 -connect contre.lucas:443 < /dev/null | awk '/BEGIN CERTIFICATE/,/END CERTIFICATE/{ if(/BEGIN CERTIFICATE/){a++}; out="cert"a".pem"; print >out}'
+```
