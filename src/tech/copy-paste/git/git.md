@@ -30,3 +30,17 @@ Deleting the `.git` folder may cause problems in your git repository. If you wan
 
 PS: this will not keep your old commit history around. It will keep just your last commit so be sure not to have sensible data on that one.
 
+
+## Update last pushed commit name
+
+1. **Ammend**
+` git commit --amend`
+
+2. **Force push**
+`git push --force`
+
+## Update last N commits name (TBC)
+
+1. **Rebase**
+
+
