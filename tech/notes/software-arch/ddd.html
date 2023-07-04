@@ -1,0 +1,447 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js ayu">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Domain Driven Design - Lucas Contre</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../../favicon.svg">
+        <link rel="shortcut icon" href="../../../favicon.png">
+        <link rel="stylesheet" href="../../../css/variables.css">
+        <link rel="stylesheet" href="../../../css/general.css">
+        <link rel="stylesheet" href="../../../css/chrome.css">
+        <link rel="stylesheet" href="../../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../../highlight.css">
+        <link rel="stylesheet" href="../../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "ayu";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../../index.html">Introduction</a></li><li class="chapter-item expanded "><a href="../../../tech/notes/index.html"><strong aria-hidden="true">1.</strong> Notes</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../tech/notes/enterprise-arch.html"><strong aria-hidden="true">1.1.</strong> Eneterprise Architecture</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../tech/notes/enterprise-arch/lawsnprinciples.html"><strong aria-hidden="true">1.1.1.</strong> Laws and Principle</a></li></ol></li><li class="chapter-item expanded "><a href="../../../tech/notes/software-arch/index.html"><strong aria-hidden="true">1.2.</strong> Software Architecture</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../tech/notes/software-arch/clean-arch.html"><strong aria-hidden="true">1.2.1.</strong> Clean Architecture</a></li><li class="chapter-item expanded "><a href="../../../tech/notes/software-arch/ddd.html" class="active"><strong aria-hidden="true">1.2.2.</strong> Domain Driven Design</a></li><li class="chapter-item "><a href="../../../tech/notes/software-arch/lawsnprinciples.html"><strong aria-hidden="true">1.2.3.</strong> Laws and Principle</a></li></ol></li><li class="chapter-item "><a href="../../../tech/notes/linux/index.html"><strong aria-hidden="true">1.3.</strong> Linux</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../tech/notes/linux/which-distro.html"><strong aria-hidden="true">1.3.1.</strong> Which Linux Distro ?</a></li><li class="chapter-item "><a href="../../../tech/notes/linux/capabilities.html"><strong aria-hidden="true">1.3.2.</strong> Capabilities</a></li><li class="chapter-item "><a href="../../../tech/notes/linux/checking-system-performance.html"><strong aria-hidden="true">1.3.3.</strong> Performance check</a></li><li class="chapter-item "><a href="../../../tech/notes/ssh/tunneling.html"><strong aria-hidden="true">1.3.4.</strong> ssh</a></li><li class="chapter-item "><a href="../../../tech/notes/linux/systemd/systemd.html"><strong aria-hidden="true">1.3.5.</strong> Systemd</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../tech/notes/linux/systemd/journalctl.html"><strong aria-hidden="true">1.3.5.1.</strong> Journal</a></li></ol></li><li class="chapter-item "><a href="../../../tech/notes/linux/containers/index.html"><strong aria-hidden="true">1.3.6.</strong> Containers</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../tech/notes/linux/containers/podman.html"><strong aria-hidden="true">1.3.6.1.</strong> Podman</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../../tech/notes/philosphy.html"><strong aria-hidden="true">1.4.</strong> Software Philosphy</a></li><li class="chapter-item "><a href="../../../tech/notes/security.html"><strong aria-hidden="true">1.5.</strong> Security</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../tech/notes/security/tls.html"><strong aria-hidden="true">1.5.1.</strong> TLS</a></li></ol></li><li class="chapter-item "><a href="../../../tech/notes/abstractions.html"><strong aria-hidden="true">1.6.</strong> Designing Abstractions</a></li></ol></li><li class="chapter-item expanded "><a href="../../../tech/copy-paste/index.html"><strong aria-hidden="true">2.</strong> Copy/Paste</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../tech/copy-paste/cloud/oneliners.html"><strong aria-hidden="true">2.1.</strong> Cloud</a></li><li class="chapter-item "><a href="../../../tech/copy-paste/terminal/shell.html"><strong aria-hidden="true">2.2.</strong> Shell</a></li><li class="chapter-item "><a href="../../../tech/copy-paste/terminal/arch.html"><strong aria-hidden="true">2.3.</strong> Arch</a></li><li class="chapter-item "><a href="../../../tech/copy-paste/containers/oneliners.html"><strong aria-hidden="true">2.4.</strong> Containers</a></li><li class="chapter-item "><a href="../../../tech/copy-paste/cloud/k8s.html"><strong aria-hidden="true">2.5.</strong> K8S</a></li><li class="chapter-item "><a href="../../../tech/copy-paste/networking/oneliners.html"><strong aria-hidden="true">2.6.</strong> Networking</a></li><li class="chapter-item "><a href="../../../tech/copy-paste/databases/mysql.html"><strong aria-hidden="true">2.7.</strong> MySQL</a></li><li class="chapter-item "><a href="../../../tech/copy-paste/git/git.html"><strong aria-hidden="true">2.8.</strong> Git</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu (default)</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Lucas Contre</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="domain-driven-design"><a class="header" href="#domain-driven-design">Domain Driven Design</a></h1>
+<h2 id="quick-ddd-notes"><a class="header" href="#quick-ddd-notes">Quick DDD Notes</a></h2>
+<p>This notes have been taken from the free <a href="https://www.goodreads.com/book/show/2558105">Domain Driven Design Quickly
+</a>. I highly recommend reading the
+book. I have found it to be a concise summary of the <a href="https://www.goodreads.com/en/book/show/179133">original
+book</a>. In this summary I will be
+just mentioning/listing the best ideas of the all the concepts mentioned in the
+book. </p>
+<p><strong>Disclaimer:</strong> <em>There is no strict narrative to this post, just useful ideas
+written in a sentence or two to Ctrl+F whenever you hesitate before making a
+design decision.</em></p>
+<h2 id="model"><a class="header" href="#model">Model</a></h2>
+<p>The, so called, <strong>Model</strong> is the abstraction of the <strong>Domain</strong>.</p>
+<p>The Domain comes to light talking to the <em>Domain Experts</em>, which are the
+business experts.</p>
+<p>The abstraction is the model. This is not a diagram but the idea that the
+diagram is intended to convey.</p>
+<p>Sometime the domain contain too much, so we must leave parts out of our model.</p>
+<p>We should be able to communicate the Model.</p>
+<ul>
+<li>Graphical Diagrams</li>
+<li>Writing</li>
+<li>Language</li>
+</ul>
+<p>Only once we are sure we can communicate the model we can start to design our
+code.</p>
+<p><strong>Software Design:</strong> The big pictures, where the walls of a house are going to
+be placed.</p>
+<p><strong>Code Design:</strong> Detail, where certain painting is going to be hang.</p>
+<p>Code design mistakes are easy to correct, the totally opposite happens with
+Software design mistakes.</p>
+<p><strong>Analysis Paralysis:</strong> Teams members so afraid of making any design decision
+that end up making no progress at all.</p>
+<h2 id="the-ubiquitous-language"><a class="header" href="#the-ubiquitous-language">The Ubiquitous Language</a></h2>
+<p>One different person uses different words when writing than when speaking.
+Sometimes, even in the same sentences.</p>
+<p>A core principle of DDD is to use a language <strong>based on the model</strong>.</p>
+<p>That language and the models are strongly interconnected with one another. A
+change in the language is a change in the model.</p>
+<p><strong><em>Domain experts should easily understands the both the language and the
+model.</em></strong></p>
+<p>The language can be expressed in text, diagrams, etc. (UML diagrams are not
+recommended by this book)</p>
+<h2 id="model-driven-design"><a class="header" href="#model-driven-design">Model Driven Design</a></h2>
+<p><strong>Very important details are discovered during the design and implementation
+process.</strong> A Model that is truthful to the Domain can turn out to have serious
+problems with object persistence, or unacceptable performance behaviour. The
+Model should be constructed with an eye open to the software and design
+considerations. <strong>Developers should be included in the modeling process</strong>. This
+ensures that the model can actually be implemented.</p>
+<p>&quot;Procedural programming does not suit well Model driven Design&quot;</p>
+<h3 id="the-building-blocks-of-a-model-driven-design"><a class="header" href="#the-building-blocks-of-a-model-driven-design">The building blocks of a Model Driven Design</a></h3>
+<p><img src="../img/2021-06-22-11-25-26.png" alt="Model Driven Design" /></p>
+<h2 id="layered-architecture"><a class="header" href="#layered-architecture">Layered Architecture</a></h2>
+<p>A common architectural solution for domain-driven designs contain four
+conceptual layers:</p>
+<p><strong>User Interface</strong> (Presentation Layer): Responsible for presenting information
+to the user and interpreting user commands.</p>
+<p><strong>Application Layer:</strong> This is a thin layer which coordinates the application
+activity. It does not contain business logic. It does not hold the state of the
+business objects, but it can hold the state of an application task progress.</p>
+<p><strong>Domain Layer:</strong> This layer contains information about the domain. This is the
+heart of the business software. The state of business objects is held here.
+Persistence of the business objects and possibly their state is delegated to the
+infrastructure layer.</p>
+<p><strong>Infrastructure Layer:</strong> This layer acts as a supporting library for all the
+other layers. It provides communication between layers, implements persistence
+for business objects, contains supporting libraries for the user interface
+layer, etc.</p>
+<h2 id="entities"><a class="header" href="#entities">Entities</a></h2>
+<p>Entities are necessary objects in the domain model and should be considered from
+beginning of the modeling.</p>
+<p>An Object must be an Entity as long as it has identity. For these objects is not
+the attributes that matter, but the thread of continuity and identity.</p>
+<p>Usually the identity is either an attribute of the object, a combination of
+attributes or an attribute specially created to preserve and express identity,
+or even a behaviour.  The &quot;ID&quot; could be auto generated by a module, could be the
+PK of a table in a DB or it could be created by the user.</p>
+<p>This means of identification may come from outside or it may be created by and
+for the system, bit it must correspond to the identity distinctions in the
+model.  The model must define what it means to be the same thing.</p>
+<p>Beware of considering all objects entities, there may be performance issues.
+(Consider the case of a drawing App explained in the book)</p>
+<h2 id="value-objects"><a class="header" href="#value-objects">Value Objects</a></h2>
+<p>There are cases where we need to contain some attributes of a domain element we
+are not interested in which object it is, but what attributes it has. An object
+that is used to describe certain aspects of a domain, and which does not have
+identity, is name value object.</p>
+<p>It is highly recommendable that these objects are immutable, even more if they
+are sharable</p>
+<p>Value objects  should stay thin, making a copy of a V.O should be easy.</p>
+<p>Value Objects, can contain other value objects, and they can even contain
+references to entities. Although V.O attributes of a domain object, that does
+not mean that it should contain a long list with all the attributes.  Attributes
+can be grouped in different objects. Attributes chosen to make up a V.O should
+form a conceptual whole.</p>
+<p><img src="../img/2021-06-22-15-47-12.png" alt="Value Objects" /></p>
+<h2 id="services"><a class="header" href="#services">Services</a></h2>
+<p>Some aspects of the domain are not easily mapped to objects,. Objects are
+generally considered as having attributes, an internal state which is managed by
+the object, and exhibit a behaviour.</p>
+<p>The nouns of the language are easily mapped to objects, the verbs of the
+language become the part of the behaviour of those objects. But there are some
+actions in the domain, some verbs, which do not seem to belong to any object.
+They represent an important behaviour of the domain, so they cannot be neglected
+or simply incorporated to some of the Entities or Value Objects. Nonetheless,
+using an OO language, we have to use an object for this purpose. </p>
+<p>When such a behaviour is recognized in the domain, the best practice is to
+declare it as a Service. Such object does not have an internal state, and it
+purpose is to provide functionality to the domain. The Service can group related
+functionality which serves Entities and Value Objects. </p>
+<p>Services must be declared explicitly, they must encapsulate a concept. We should
+not create a Service for each operation needed. But when such an operation
+stands out as an important concept in the domain.</p>
+<p>A Service is not about the object performing the service, but is related to the
+objects the operations are performed on/for. They usually become the point of
+connection for many objects.</p>
+<p>There are 3 characteristics of a Service:</p>
+<ol>
+<li>
+<p>The operation performed by a Service refers to a domain concept which does
+not naturally belong to an Entity or Value Object</p>
+</li>
+<li>
+<p>The operation performed refers to other objects in the domain.</p>
+</li>
+<li>
+<p>The operation is stateless</p>
+</li>
+</ol>
+<p>It is easy to confused services which belongs to the domain and those that
+belong to the infrastructure. (To read more about it please refer to the last
+part of the &quot;Service&quot; chapter where some examples are provided)</p>
+<h2 id="modules"><a class="header" href="#modules">Modules</a></h2>
+<p>The model reaches a point where it is hard to talk about as a whole and
+understanding the relationships and interaction between different parts becomes
+difficult. For that reason, it is necessary to organize the model into modules.</p>
+<p>Using modules in design is a way to increase cohesion and decrease coupling.
+Modules should be made up of elements which functionally or logically belongs
+together assuring cohesion. Modules should have wall defined interfaces which
+are accessed by other modules instead of calling three objects of a module, it
+is better to access one interface, because it reduces coupling. Low coupling
+reduces complexity, and increases maintainability. It is easier to understand
+how a system functions when there are few connections between modules. </p>
+<p>It is widely accepted   that software code should have a high level of cohesion
+and low level of coupling.</p>
+<p>There are several types of cohesion. Two of the most used are <strong>communicational
+cohesion</strong> and <strong>functional cohesion</strong> . </p>
+<p>Communicational cohesion is achieved when parts of the module operate on the
+same data. It makes sense to group the because there is a strong relationship
+between them.</p>
+<p>Functional cohesion is achieved when all parts of the modules work together to
+perform a well-defined task. This is consider the best type of cohesion.</p>
+<p>Chose modules that tells the story of the system and contain a cohesive set of
+concepts.</p>
+<p>Seek low coupling in the sense of concepts that can be understood and reasoned
+about independently of each other.</p>
+<p>Give the modules names that become part of the Ubiquitous Language. Name of
+modules should reflect insights into the domain.</p>
+<h2 id="modeling-domain-objects-aggregates"><a class="header" href="#modeling-domain-objects-aggregates">Modeling Domain Objects (Aggregates)?</a></h2>
+<p>The last three patterns in this chapter will deal with a different modeling
+challenge, one related to the life cycle of domain objects. Domain objects go
+through a set of states during their life time. They are created, placed in
+memory and used in computations, and they are destroyed. In some cases they are 
+saved in permanent locations, like a database, where they can be retrieved from
+some time later, or they can be archived.</p>
+<p>No matter how much consideration we put in the design, it happens that many
+objects are associated with one another, creating a complex net of
+relationships. There are several types of associations. For every traversable
+association in the model, there has to be corresponding software mechanism which
+enforces it. Real associations between domain object end up in the code, and
+many times even in the database. A one-to-one relationship between a customer
+and the bank account opened on his name is expressed as a reference between two
+objects, and implies a relationship between two database tables, the one which
+keeps the customers and the one which keeps the accounts.</p>
+<p>Most of the time it pays of to eliminate or simplify relations from the model.
+That is, unless they embed deep understanding of the domain.</p>
+<p>A one-to-many association is more complex because it involves many objects which
+become related. This relationship can be simplified by transforming it into an
+association between one object and a collection of other objects, although it is
+not always </p>
+<p>There are many-to-many associations and a large number of theme are
+bidirectional. Associations which are not essential for the model should be
+removed. They may exist in the domain, but they are not necessary in our model,
+so take them out. 
+Multiplicity can be reduced by adding a constraint. If many
+objects satisfy a relationship, it is possible that only one will do it if the
+right constraint is imposed on the relationship.
+Many time bidirectional relationships can be transformed in unidirectional ones.</p>
+<p>When domain objects are related and any of them changes (deleted, modified, etc.)
+the system needs to make sure that is is properly updated throughout the system,
+and data integrity is guaranteed. This is usually left to be addressed at
+database level. Transactions are used to enforce data integrity.</p>
+<p>While database transactions play a vital role in such operations, it is
+desirable to solve some of the problems related to data integrity directly in
+the model.</p>
+<p>It is also necessary to be able to enforce the invariants. The invariants are
+those rules which have to be maintained whenever data changes.</p>
+<p>Therefore use Aggregates</p>
+<h2 id="aggregates"><a class="header" href="#aggregates">Aggregates</a></h2>
+<p>Aggregate is a domain pattern used to define object ownership and boundaries.
+Factories and Repositories are two design patterns which help us deal with
+object creation and storage.</p>
+<p>An  Aggregate is a group of associated objects which are considered as one unit
+with regard to data changes. The Aggregate is demarcated by a boundary which
+separated the objects inside from those outside. Each Aggregate has one root.
+The root is an Entity, and it is the only object accessible from outside. The
+root can hold references to any of the aggregate objects, and the other objects
+can hold references to each other, but an outside object can hold references
+only to the root object. If there are other Entities inside the boundary, the
+identity of those entities is local, making sense only inside the aggregate.</p>
+<p>How is the Aggregate ensuring data integrity and enforcing the invariants? Since
+other objects can hold references only to the root, it means that they cannot
+directly change the other objects in the aggregate. All they can do is to change
+the root, or ask the root to perform some actions. And the root will be able to
+change the other objects, but that is an operation contained inside the
+aggregate, and it is controllable. If the root is deleted and removed from
+memory, all the other objects from the aggregate will be deleted too, because
+there is no other object holding reference to any of them.</p>
+<p>It is possible for the root to pass transient references of internal objects to
+external ones, with the condition that the external objects do not hold the
+reference after the operation is finished.  One simple way to do that is to pass
+copies of the Value Objects to external objects. It does not really matter what
+happens to those objects, because it won't affect the integrity of the aggregate
+in any way. </p>
+<p>If objects of an Aggregate are stored in a database, only the root
+should be obtainable through queries. The other objects should be obtained
+through traversal associations.</p>
+<p>Objects inside an Aggregate should be allowed to hold references to roots of
+other Aggregates.</p>
+<p>The root Entity has global identity, and is responsible for maintaining the 
+invariants. Internal Entities have local identity.</p>
+<p>Cluster the Entities and Value Objects into Aggregates and define boundaries
+around each.  Choose one Entity to be the root of each Aggregate, and control
+all access to the objects inside the boundary through the root. Allow external
+objects to hold references to the root only. Transient references to internal
+members can be passed out for use within a single operation only. Because the
+root controls access, it cannot be blindsided by changes to the internals. This
+arrangement makes it practical to enforce all invariants for objects in the
+Aggregate and for the Aggregate as a whole in any state change.</p>
+<h2 id="factories"><a class="header" href="#factories">Factories</a></h2>
+<p>Entities and Aggregates can often be large and complex – too complex to create in the constructor of the root entity. Infact trying to construct a complex aggregate in its constructure is in contradiction with what often happens in the domain itself.</p>
+<p>When the object construction is a laborious process, creating the object involves a lot of knowledge about the internal structure of the object, about the relationships between the objects contained, and the rules applied to them. This means that each client of the object will hold specific knowledge about the object built. This breaks encapsulation of the domain objects and of the Aggregates. If the client belongs to the application layer, a part of the domain layer has been moved outside, messing up the entire design. In real life, it is like we are given plasti</p>
+<p>Factories are used to encapsulate the knowledge necessary for object creation, and they are especially useful to create Aggregates. When the root of the Aggregate is created, all the objects contained by the Aggregate are created along with it, and all the invariants are enforced.</p>
+<p>It is important for the creation process to be atomic. If it is not, there is a chance for the creation process to be half done for some objects, leaving them in an undefined state.</p>
+<p>When the root is created, it is necessary that all objects subject to invariants are created too.</p>
+<p>For immutable Value Objects it means that all attributes are initialized to their valid state. If an object cannot be created properly, an exception should be raised.</p>
+<p>Therefore, shift the responsibility for creating instances of complex objects and Aggregates to a separate object, which may itself have no responsibility in the domain model but is still part of the domain design. Provide an interface that encapsulates all complex assembly and that does not require the client to reference the concrete classes of the objects being instantiated. Create entire Aggregates as a unit, enforcing their invariants.</p>
+<p>A Factory Method is an object method which contains and hides knowledge necessary to create another object. This is very useful when a client wants to create an object which belongs to an Aggregate. The solution is to add a method to the Aggregate root, which takes care of the object creation, enforces all invariants, and returns a reference to that object, or to a copy of it.</p>
+<p><img src="../img/2021-12-03-09-36-07.png" alt="Factories-1" /></p>
+<p>There are times when the construction of an object is more complex, or when the creation of an object involves the creation of a series of objects. For example: the creation of an Aggregate. Hiding the internal construction needs of an Aggregate can be done in a separate Factory object which is dedicated to this task. Let’s consider the example of a program module which</p>
+<p><img src="../img/2021-12-03-09-39-42.png" alt="" /></p>
+<p>The Route ID generator is used to create a unique identity for each route which is necessary for an Entity.</p>
+<p>When creating a Factory, we are forced to violate an object’s encapsulation. Whenever something changes in the object that has an impact on construction rules or on some of the invariants, we need to make sure the Factory is updated to support the new condition. Factories are tightly related to the objects they are created.</p>
+<p>There has to be some logic which puts together an Aggregate. The logic does not naturally belong to any of the objects, because it is about the construction of other objects. It seems appropriate to use a special Factory class</p>
+<p>There are times when a Factory is not needed, and a simple constructor is enough. Use a constructor when:</p>
+<ul>
+<li>The construction is not complicated.</li>
+<li>The creation of an object does not involve the creation of others, and all the attributes needed are passed via the constructor.</li>
+<li>The client is interested in the implementation, perhaps wants to choose the Strategy used.</li>
+<li>The class is the type. There is no hierarchy involved, so no need to choose between a list of concrete implementations.</li>
+</ul>
+<p>Another observation is that Factories need to create new objects from scratch, or they are required to reconstitute objects which previously existed, but have been probably persisted to a database. Bringing Entities back into memory from their resting place in a database involves a completely different process than creating a new one. One obvious difference is that the new object does not need a new identity</p>
+<h2 id="repositories"><a class="header" href="#repositories">Repositories</a></h2>
+<p>The purpose of a Repository is to encapsulate all the logic needed to obtain object references. The domain objects won’t have to deal with the infrastructure to get the needed references to other objects of the domain.  They will just get them from the Repository and the model is regaining its clarity and focus. </p>
+<p>The Repository may store references to some of the objects. When an object is created, it may be saved in the Repository, and retrieved from there to be used later.  If the client requested an object from the Repository, and the Repository does not have it, it may get it from the storage. Either way, the Repository acts as a storage place for globally accessible objects. </p>
+<p>The Repository may also include a Strategy. It may access one persistence storage or another based on the specified Strategy. It may use different storage locations for different type of objects. The overall effect is that the domain model is decoupled from the need of storing objects or their references, and accessing</p>
+<p>Provide Repositories only for aggregate roots the that actually need direct access.</p>
+<p>A Repository may contain detailed information used to access the infrastructure, but its interface should be simple. A Repository should have a set of methods used to retrieve objects. The client calls such a method and passes one or more</p>
+<p>There is a relationship between Factory and Repository. They are both patterns of the model-driven design, and they both help us to manage the life cycle of domain objects. While the Factory is concerned with the creation of objects, the Repository takes care of already existing objects. The Repository may cache objects locally, but most often it needs to retrieve them from a persistent storage. Objects are either created using a constructor or they are passed to a Factory to be constructed. For this reason, the Repository may be seen as a Factory, because it creates  objects. It is not a creation from scratch, but a reconstitution of an object which existed. We should not mix a Repository with a Factory. The Factory should create new objects, while the Repository should find already created objects. When a new object is to be added to the Repository, it should be created first using the Factory, and then it should be given to the Repository which will store it like in the example below.</p>
+<p>Another way this is noted is that Factories are &quot;pure domain&quot;, but that Repositories can contain links to the infrastructure, eg. the database.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../../tech/notes/software-arch/clean-arch.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../../tech/notes/software-arch/lawsnprinciples.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../../tech/notes/software-arch/clean-arch.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../../tech/notes/software-arch/lawsnprinciples.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
