@@ -36,3 +36,8 @@ Remove all python package under pip freeze
 ```shell
 openssl s_client -showcerts -verify 5 -connect contre.lucas:443 < /dev/null | awk '/BEGIN CERTIFICATE/,/END CERTIFICATE/{ if(/BEGIN CERTIFICATE/){a++}; out="cert"a".pem"; print >out}'
 ```
+
+## Sed on directory
+```shell
+find ./ -type f -exec sed -i -e 's/apple/orange/g' {} \;
+```
