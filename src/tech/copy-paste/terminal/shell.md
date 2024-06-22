@@ -41,3 +41,6 @@ openssl s_client -showcerts -verify 5 -connect contre.lucas:443 < /dev/null | aw
 ```shell
 find ./ -type f -exec sed -i -e 's/apple/orange/g' {} \;
 ```
+```shell
+grep -rl 'apples' /dir_to_search_under | xargs sed -i 's/apples/oranges/g'
+```
