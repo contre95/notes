@@ -1,0 +1,261 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js ayu">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Which Linux Distro ? - Lucas Contre</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../../favicon.svg">
+        <link rel="shortcut icon" href="../../../favicon.png">
+        <link rel="stylesheet" href="../../../css/variables.css">
+        <link rel="stylesheet" href="../../../css/general.css">
+        <link rel="stylesheet" href="../../../css/chrome.css">
+        <link rel="stylesheet" href="../../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../../highlight.css">
+        <link rel="stylesheet" href="../../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "ayu";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../../index.html">Introduction</a></li><li class="chapter-item expanded "><a href="../../../tech/notes/index.html"><strong aria-hidden="true">1.</strong> Notes</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../tech/notes/enterprise-arch.html"><strong aria-hidden="true">1.1.</strong> Eneterprise Architecture</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../tech/notes/enterprise-arch/lawsnprinciples.html"><strong aria-hidden="true">1.1.1.</strong> Laws and Principle</a></li></ol></li><li class="chapter-item "><a href="../../../tech/notes/software-arch/index.html"><strong aria-hidden="true">1.2.</strong> Software Architecture</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../tech/notes/software-arch/clean-arch.html"><strong aria-hidden="true">1.2.1.</strong> Clean Architecture</a></li><li class="chapter-item "><a href="../../../tech/notes/software-arch/ddd.html"><strong aria-hidden="true">1.2.2.</strong> Domain Driven Design</a></li><li class="chapter-item "><a href="../../../tech/notes/software-arch/lawsnprinciples.html"><strong aria-hidden="true">1.2.3.</strong> Laws and Principle</a></li></ol></li><li class="chapter-item expanded "><a href="../../../tech/notes/linux/index.html"><strong aria-hidden="true">1.3.</strong> Linux</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../tech/notes/linux/which-distro.html" class="active"><strong aria-hidden="true">1.3.1.</strong> Which Linux Distro ?</a></li><li class="chapter-item "><a href="../../../tech/notes/linux/capabilities.html"><strong aria-hidden="true">1.3.2.</strong> Capabilities</a></li><li class="chapter-item "><a href="../../../tech/notes/linux/checking-system-performance.html"><strong aria-hidden="true">1.3.3.</strong> Performance check</a></li><li class="chapter-item "><a href="../../../tech/notes/ssh/tunneling.html"><strong aria-hidden="true">1.3.4.</strong> ssh</a></li><li class="chapter-item "><a href="../../../tech/notes/linux/systemd/systemd.html"><strong aria-hidden="true">1.3.5.</strong> Systemd</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../tech/notes/linux/systemd/journalctl.html"><strong aria-hidden="true">1.3.5.1.</strong> Journal</a></li></ol></li><li class="chapter-item "><a href="../../../tech/notes/linux/containers/index.html"><strong aria-hidden="true">1.3.6.</strong> Containers</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../tech/notes/linux/containers/podman.html"><strong aria-hidden="true">1.3.6.1.</strong> Podman</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../../tech/notes/philosphy.html"><strong aria-hidden="true">1.4.</strong> Software Philosphy</a></li><li class="chapter-item "><a href="../../../tech/notes/security.html"><strong aria-hidden="true">1.5.</strong> Security</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../tech/notes/security/tls.html"><strong aria-hidden="true">1.5.1.</strong> TLS</a></li></ol></li><li class="chapter-item "><a href="../../../tech/notes/abstractions.html"><strong aria-hidden="true">1.6.</strong> Designing Abstractions</a></li></ol></li><li class="chapter-item expanded "><a href="../../../tech/copy-paste/index.html"><strong aria-hidden="true">2.</strong> Copy/Paste</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../tech/copy-paste/cloud/oneliners.html"><strong aria-hidden="true">2.1.</strong> Cloud</a></li><li class="chapter-item "><a href="../../../tech/copy-paste/terminal/shell.html"><strong aria-hidden="true">2.2.</strong> Shell</a></li><li class="chapter-item "><a href="../../../tech/copy-paste/terminal/arch.html"><strong aria-hidden="true">2.3.</strong> Arch</a></li><li class="chapter-item "><a href="../../../tech/copy-paste/containers/oneliners.html"><strong aria-hidden="true">2.4.</strong> Containers</a></li><li class="chapter-item "><a href="../../../tech/copy-paste/cloud/k8s.html"><strong aria-hidden="true">2.5.</strong> K8S</a></li><li class="chapter-item "><a href="../../../tech/copy-paste/networking/oneliners.html"><strong aria-hidden="true">2.6.</strong> Networking</a></li><li class="chapter-item "><a href="../../../tech/copy-paste/databases/mysql.html"><strong aria-hidden="true">2.7.</strong> MySQL</a></li><li class="chapter-item "><a href="../../../tech/copy-paste/git/git.html"><strong aria-hidden="true">2.8.</strong> Git</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu (default)</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Lucas Contre</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="a-basic-compilation-of-concepts-before-choosing-your-linux-distribution"><a class="header" href="#a-basic-compilation-of-concepts-before-choosing-your-linux-distribution">A basic compilation of concepts before choosing your Linux distribution</a></h1>
+<p>This post is a compilation of Wikipedia, ArchWiki and Stackoverflow posts. I took a small but tasty bite of each post in order to gather a base knowledge in order to start your research for the Linux distribution that best suits you. Beware you might found your self researching a bit of history you might forget, reading specific  documentation of software you might not use and maybe running some tests on your local machine in order to fully understand all of these concepts.</p>
+<h2 id="x"><a class="header" href="#x">X</a></h2>
+<p>The <strong>X Window System</strong> (<strong>X11</strong>, or simply <strong>X</strong>) is a <a href="https://en.wikipedia.org/wiki/Windowing_system">windowing system</a> for <a href="https://en.wikipedia.org/wiki/Bitmap">bitmap</a> displays (aka. &quot;the pix-map&quot;, which refers to a map of pixels), common on <a href="https://en.wikipedia.org/wiki/Unix-like">Unix-like</a> <a href="https://en.wikipedia.org/wiki/Operating_systems">operating systems</a>. X provides the basic <a href="https://en.wikipedia.org/wiki/Software_framework">framework</a> for a <a href="https://en.wikipedia.org/wiki/Graphical_user_interface">GUI</a> environment: drawing and moving <a href="https://en.wikipedia.org/wiki/Window_(computing)">windows</a> on the <a href="https://en.wikipedia.org/wiki/Display_device">display device</a> and interacting with a <a href="https://en.wikipedia.org/wiki/Computer_mouse">mouse</a> and <a href="https://en.wikipedia.org/wiki/Computer_keyboard">keyboard</a>. X does not mandate the user interface – this is handled by individual programs. As such, the visual styling of X-based environments varies greatly; different programs may present radically different interfaces.</p>
+<p>The <a href="https://en.wikipedia.org/wiki/X_protocol">X protocol</a> (clearly the protocol that X Window System implements) has been at version 11 (hence &quot;X11&quot;) since September 1987. The <a href="https://en.wikipedia.org/wiki/X.Org_Foundation">X.Org Foundation</a> leads the X project, with the current reference implementation, <a href="https://en.wikipedia.org/wiki/X.Org_Server">X.Org Server</a>, available as <a href="https://en.wikipedia.org/wiki/Free_and_open_source_software">free and open source software</a> under the <a href="https://en.wikipedia.org/wiki/MIT_License">MIT License</a> and similar <a href="https://en.wikipedia.org/wiki/Permissive_free_software_licences">permissive licenses</a>.</p>
+<p>The X Window System is based on a <a href="https://en.wikipedia.org/wiki/Client%E2%80%93server_model">client–server model</a>: a single <a href="https://en.wikipedia.org/wiki/Server_(computing)">server</a> controls the <a href="https://en.wikipedia.org/wiki/Input/output">input/output</a> hardware, such as the <a href="https://en.wikipedia.org/wiki/Computer_screen">screen</a>, the <a href="https://en.wikipedia.org/wiki/Computer_keyboard">keyboard</a>, and the <a href="https://en.wikipedia.org/wiki/Computer_mouse">mouse</a>; all application <a href="https://en.wikipedia.org/wiki/Computer_program">programs</a> act as <a href="https://en.wikipedia.org/wiki/Client_(computing)">clients</a>, interacting with the <a href="https://en.wikipedia.org/wiki/User_(computing)">user</a> and with the other clients via the server.</p>
+<p><strong>Xorg</strong></p>
+<p>Xorg (commonly referred as simply <strong>X</strong>) is the most popular display server among Linux users. Its ubiquity has led to making it an ever-present requisite for GUI applications, resulting in massive adoption from most distributions. See the <a href="https://en.wikipedia.org/wiki/X.Org_Server">Xorg</a> Wikipedia article or visit the <a href="https://www.x.org/wiki/">Xorg website</a> for more details.</p>
+<p>In other words, <strong>X</strong> is an <strong>application</strong> that manages one or more graphics displays and one or more input devices (keyboard, mouse, etc.) connected to the computer.</p>
+<p><strong>It works as a server</strong> and can run on the local computer or on another computer on the network. Services can communicate with the X server to display graphical interfaces and receive input from the user.</p>
+<p>It's worth noting, a common component used with an X server is the Window Manager, an application that manages the resizing and moving of windows and decorative elements of windows such as title bars, minimize, and close buttons.</p>
+<p>The X server can be started with the <code>startx</code> command, or more commonly, from a <strong>display manager</strong> such as gdm, lightdm etc...</p>
+<p><code>~/.xinitrc</code> is a shell script used by xinit, that starts the X server when not using a display manager, to define some application to start automatically in the X server.</p>
+<p><code>/etc/X11/xorg.conf</code> is a configuration file used to give the X server information about the hardware components used, but now the X server can avoid using it, because it is capable of autoconfiguring itself.</p>
+<p><strong>X is a server</strong> (meaning a program which other programs call upon and be called by) which is responsible for creating a graphical environment and if it fails for whatever reason, you'll be greeted by Command Line Interface (CLI).</p>
+<p>The term <strong>server</strong> can also be said to apply to PulseAudio, which is the sound server, and it calls applications and is called upon to produce sound.</p>
+<h2 id="sound-server"><a class="header" href="#sound-server">Sound Server</a></h2>
+<p>In a <a href="https://en.wikipedia.org/wiki/Unix-like">Unix-like</a> operating system, a sound server mixes different data streams and sends out a single unified audio to an output device. The mixing is usually done by software, or by hardware if there is a supported <a href="https://en.wikipedia.org/wiki/Sound_card">sound card</a>.</p>
+<p><strong>Layer</strong></p>
+<p>The &quot;sound stack&quot; can be visualized as follows, with programs in the upper layers calling elements in the lower layers:</p>
+<ul>
+<li>
+<p>Applications (e.g. mp3 player, web video)</p>
+</li>
+<li>
+<p>Sound server (e.g. aRts, ESD, <a href="https://en.wikipedia.org/wiki/JACK_Audio_Connection_Kit">JACK</a>, <a href="https://en.wikipedia.org/wiki/PulseAudio">PulseAudio</a>)</p>
+</li>
+<li>
+<p>Sound subsystem (described as kernel modules or drivers; e.g. <a href="https://en.wikipedia.org/wiki/Open_Sound_System">OSS</a>, <a href="https://en.wikipedia.org/wiki/Advanced_Linux_Sound_Architecture">ALSA</a>)</p>
+</li>
+<li>
+<p>Operating system kernel (e.g. <a href="https://en.wikipedia.org/wiki/Linux">Linux</a>, <a href="https://en.wikipedia.org/wiki/Unix">Unix</a>)</p>
+</li>
+</ul>
+<h2 id="gui-toolkits"><a class="header" href="#gui-toolkits">GUI Toolkits</a></h2>
+<p><strong>What is KDE, GTK, GTK+, QT, and/or GNOME?</strong></p>
+<p><strong>GTK</strong>, <strong>GTK+</strong>, and <strong>Qt</strong> are <strong>GUI toolkits</strong>. These are libraries that developers use to design graphical interfaces, all running on top of the X Server. These are things that you need to install as dependencies. They're the Linux &quot;equivalent&quot; to Windows' <strong>GDI/GDI+</strong>. When an application uses any of these, it will always have a general &quot;look and feel&quot;.</p>
+<p><strong>GNOME</strong> and <strong>KDE</strong> are <strong>Desktop Environment</strong>s. <strong>GNOME</strong> primarily uses the <strong>GTK+</strong> toolkit, while <strong>KDE</strong> primarily uses the <strong>Qt</strong> toolkit. <em>There are applications designed for GNOME or KDE, such as a settings menu or a default music player, usually in the appropriate toolkit</em>. These Desktop Environments have a set of utilities/window managers/design specification to create a more unified desktop. You can mix the two if you feel like it, but you may run into issues with colliding standards and applications (which you might occasionally run into on systems like Arch).</p>
+<p>Unity, another desktop environment, uses many of the GNOME utilities (Nautilus, Rhythmbox, etc.), so Unity is more GNOME than KDE.</p>
+<p><em>Source: https://askubuntu.com/questions/249150/what-is-kde-gtk-gtk-qt-and-or-gnome</em></p>
+<p><em>For more information: https://wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications</em></p>
+<h2 id="desktop-environments"><a class="header" href="#desktop-environments">Desktop Environments</a></h2>
+<p>A <a href="https://en.wikipedia.org/wiki/Desktop_environment">desktop environment</a> (<strong>DE</strong>) is an implementation of the <a href="https://en.wikipedia.org/wiki/Desktop_metaphor">desktop metaphor</a> made of a bundle of programs, which share a common graphical user interface (GUI).</p>
+<p>A desktop environment bundles together a variety of components to provide common graphical user interface elements such as icons, toolbars, wallpapers, and desktop widgets. Additionally, most desktop environments include a set of integrated applications and utilities. Most importantly, desktop environments provide their own <a href="https://wiki.archlinux.org/index.php/Window_manager">window manager</a>, which can however usually be replaced with another compatible one.</p>
+<p>The user is free to configure their GUI environment in any number of ways. Desktop environments simply provide a complete and convenient means of accomplishing this task. Note that users are free to mix-and-match applications from multiple desktop environments. For example, a <a href="https://wiki.archlinux.org/index.php/KDE">KDE</a> user may install and run <a href="https://wiki.archlinux.org/index.php/GNOME">GNOME</a> applications such as the <a href="https://wiki.archlinux.org/index.php/Epiphany">Epiphany</a> web browser, should he/she prefer it over KDE's Konqueror web browser. One drawback of this approach is that many applications provided by desktop environment projects rely heavily upon their DE's respective underlying libraries. As a result, installing applications from a range of desktop environments will require installation of a larger number of dependencies. Users seeking to conserve disk space often avoid such mixed environments, or chose alternatives which do depend on only few external libraries.</p>
+<p>Furthermore, DE-provided applications tend to integrate better with their native environments. Superficially, mixing environments with different widget toolkits will result in visual discrepancies (that is, interfaces will use different icons and widget styles). In terms of usability, mixed environments may not behave similarly (e.g. single-clicking versus double-clicking icons; drag-and-drop functionality) potentially causing confusion or unexpected behavior.</p>
+<p>Prior to installing a desktop environment, a functional X server installation is required. See <a href="https://wiki.archlinux.org/index.php/Xorg">Xorg</a> for detailed information. Some desktop environments may also support <a href="https://wiki.archlinux.org/index.php/Wayland">Wayland</a> as an alternative to X, but most of these are still experimental.</p>
+<h2 id="windows-manager"><a class="header" href="#windows-manager">Windows Manager</a></h2>
+<p>A <a href="https://en.wikipedia.org/wiki/Window_manager">window manager</a> (WM) is system software that controls the placement and appearance of windows within a windowing system in a graphical user interface (GUI). It can be part of a <a href="https://wiki.archlinux.org/index.php/Desktop_environment">desktop environment</a> (DE) or be used standalone. Window managers are X clients that control the appearance and behavior of the frames (&quot;windows&quot;) where the various graphical applications are drawn. They determine the border, title bar, size, and ability to resize windows, and often provide other functionality such as reserved areas for sticking <a href="http://windowmaker.org/dockapps/">dockapps</a> like <a href="https://wiki.archlinux.org/index.php/Window_Maker">Window Maker</a>, or the ability to tab windows like <a href="https://wiki.archlinux.org/index.php/Fluxbox">Fluxbox</a>. Some window managers are even bundled with simple utilities like menus to start programs or to configure the WM itself.</p>
+<p><strong>There are 3 types of window managers</strong></p>
+<ul>
+<li><a href="https://wiki.archlinux.org/index.php/Window_manager#Stacking_window_managers">Stacking</a> (aka floating) window managers provide the traditional desktop metaphor used in commercial operating systems like Windows and OS X. Windows act like pieces of paper on a desk, and can be stacked on top of each other.</li>
+<li><a href="https://wiki.archlinux.org/index.php/Window_manager#Tiling_window_managers">Tiling</a> window managers &quot;tile&quot; the windows so that none are overlapping. They usually make very extensive use of key-bindings and have less (or no) reliance on the mouse. Tiling window managers may be manual, offer predefined layouts, or both. </li>
+<li><a href="https://wiki.archlinux.org/index.php/Window_manager#Dynamic_window_managers">Dynamic</a> window managers can dynamically switch between tiling or floating window layout.</li>
+</ul>
+<p>Source: https://wiki.archlinux.org/index.php/Window_manager</p>
+<h2 id="display-manager"><a class="header" href="#display-manager">Display Manager</a></h2>
+<p>A <a href="https://en.wikipedia.org/wiki/X_display_manager_(program_type)">display manager</a>, or login manager, is typically a graphical user interface that is displayed at the end of the boot process in place of the default shell. There are various implementations of display managers, just as there are various types of <a href="https://wiki.archlinux.org/index.php/Window_managers">window managers</a> and <a href="https://wiki.archlinux.org/index.php/Desktop_environments">desktop environments</a>. There is usually a certain amount of customization and theme-ability available with each one. Some display manager are LightDM, Gdm, Greetd and XDM</p>
+<h2 id="init-systems"><a class="header" href="#init-systems">Init Systems</a></h2>
+<p>In <a href="https://en.wikipedia.org/wiki/Unix">Unix</a>-based computer <a href="https://en.wikipedia.org/wiki/Operating_system">operating systems</a>, <strong>init</strong> (short for <em>initialization</em>) is the first <a href="https://en.wikipedia.org/wiki/Process_(computer_science)">process</a> started during <a href="https://en.wikipedia.org/wiki/Booting">booting</a> of the computer system. Init is a <a href="https://en.wikipedia.org/wiki/Daemon_(computing)">daemon</a> process that continues running until the system is shut down. It is the direct or indirect <a href="https://en.wikipedia.org/wiki/Parent_process">ancestor</a> of all other processes and automatically adopts all <a href="https://en.wikipedia.org/wiki/Orphan_process">orphaned processes</a>. Init is started by the <a href="https://en.wikipedia.org/wiki/Kernel_(computing)">kernel</a> during the <a href="https://en.wikipedia.org/wiki/Booting">booting</a> process; a <a href="https://en.wikipedia.org/wiki/Kernel_panic">kernel panic</a> will occur if the kernel is unable to start it. </p>
+<p>The init <em>scripts</em> (or <em>rc</em>) are launched by the init process to guarantee basic functionality on system start and shutdown. This includes (un)mounting of <a href="https://wiki.archlinux.org/index.php/File_system">file systems</a> and launching of <a href="https://wiki.archlinux.org/index.php/Daemons">daemons</a>. A <em>service manager</em> takes this one step further by providing active control over launched processes, or <a href="https://en.wikipedia.org/wiki/Process_Supervision">process supervision</a>. An example is to monitor for crashes and restart processes accordingly.</p>
+<p>Several additional init implementations have been created, attempting to address design limitations in the traditional versions. These include <a href="https://en.wikipedia.org/wiki/Launchd">launchd</a>, the <a href="https://en.wikipedia.org/wiki/Service_Management_Facility">Service Management Facility</a>, <a href="https://en.wikipedia.org/wiki/Systemd">systemd</a> and <a href="https://en.wikipedia.org/wiki/OpenRC">OpenRC</a>.</p>
+<p>Various efforts have been made to replace the traditional init daemons to address this and other design problems, including:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/GoboLinux#Boot_system">BootScripts</a> in <a href="https://en.wikipedia.org/wiki/GoboLinux">GoboLinux</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Busybox">busybox-init</a>, suited to <a href="https://en.wikipedia.org/wiki/Embedded_operating_system">embedded operating systems</a>, employed by <a href="https://en.wikipedia.org/wiki/OpenWrt">OpenWrt</a> before it was replaced with <a href="https://en.wikipedia.org/wiki/OpenWrt#procd">procd</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Daemon_(computing)">Daemons</a>, by a modification of the init start process by <a href="https://en.wikipedia.org/w/index.php?title=KahelOS&amp;action=edit&amp;redlink=1">KahelOS</a>, daemons are started only when the DE (desktop environment) started</li>
+<li>eINIT, a full replacement of init designed to start processes <a href="https://en.wikipedia.org/wiki/Asynchrony_(computer_programming)">asynchronously</a>, but with the potential of doing it without <a href="https://en.wikipedia.org/wiki/Shell_scripts">shell scripts</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Epoch_(init_system)&amp;action=edit&amp;redlink=1">Epoch</a>, a single-threaded Linux init system focused on simplicity and service management[<a href="https://en.wikipedia.org/wiki/Init#cite_note-14">14]</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Initng">Initng</a>, a full replacement of init designed to start processes asynchronously</li>
+<li><a href="https://en.wikipedia.org/wiki/Launchd">launchd</a>, a replacement for init in <a href="https://en.wikipedia.org/wiki/Darwin_(operating_system)">Darwin</a>/<a href="https://en.wikipedia.org/wiki/MacOS">macOS</a>/<a href="https://en.wikipedia.org/wiki/IOS">iOS</a>/<a href="https://en.wikipedia.org/wiki/TvOS">tvOS</a> starting with <a href="https://en.wikipedia.org/wiki/Mac_OS_X_v10.4">Mac OS X v10.4</a> (it launches SystemStarter to run old-style 'rc.local' and SystemStarter processes)</li>
+<li><a href="https://web.archive.org/web/20071211041543/http://www.pardus.org.tr/eng/projeler/comar/SpeedingUpLinuxWithPardus.html">Mudur</a>, an init replacement written in <a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python</a> and designed to start process asynchronously in use by the <a href="https://en.wikipedia.org/wiki/Pardus_(operating_system)">Pardus</a> Linux distribution</li>
+<li><a href="https://lede-project.org/docs/guide-developer/procd">procd</a> is used in LEDE/OpenWRT</li>
+<li><a href="https://web.archive.org/web/20070824084840/http://www-128.ibm.com/developerworks/linux/library/l-boot.html">some unnamed proofs-of concept</a> based on <a href="https://en.wikipedia.org/wiki/Make_(software)">Make</a> (since makefiles can easily express dependencies and be launched in parallel)</li>
+<li>nosh, a suite of system-level utilities for initializing and running a BSD or Linux system, for managing daemons, terminals and logging</li>
+<li><a href="https://en.wikipedia.org/wiki/OpenRC">OpenRC</a>, a process spawner that utilizes system-provided init, while providing process isolation, parallelized startup, and service dependency; used by <a href="https://en.wikipedia.org/wiki/Gentoo_Linux">Gentoo</a> and its derivatives and available as an option in <a href="https://en.wikipedia.org/wiki/Devuan">Devuan</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Runit">runit</a>, a <a href="https://en.wikipedia.org/wiki/Cross-platform">cross-platform</a> full replacement for init with parallel starting of services, used by default in <a href="https://en.wikipedia.org/wiki/Void_Linux">Void Linux</a> and Artix Linux.</li>
+<li>s6, another cross-platform full replacement for init, similar to runit, based on clear principled architecture design choices.</li>
+<li>Sun <a href="https://en.wikipedia.org/wiki/Service_Management_Facility">Service Management Facility</a> (SMF), a complete replacement/redesign of init from the ground up in <a href="https://en.wikipedia.org/wiki/Illumos">illumos</a>/<a href="https://en.wikipedia.org/wiki/Solaris_(operating_system)">Solaris</a> starting with Solaris 10, but launched as the only service by the original System V-style init</li>
+<li><a href="https://en.wikipedia.org/wiki/Guix_System_Distribution#GNU_Shepherd">Shepherd</a>, the <a href="https://en.wikipedia.org/wiki/GNU">GNU</a> service and daemon manager which provides asynchronous, dependency-based initialisation; written in <a href="https://en.wikipedia.org/wiki/Guile_(programming_language)">Guile Scheme</a> and meant to be interactively hackable during normal system operation</li>
+<li><a href="https://en.wikipedia.org/wiki/Systemd">systemd</a>, a software suite, full replacement for init in Linux that includes an init daemon, with concurrent starting of services, service manager, and other features.</li>
+<li><a href="https://en.wikipedia.org/wiki/SystemStarter">SystemStarter</a>, a process spawner started by the BSD-style init in <a href="https://en.wikipedia.org/wiki/Mac_OS_X">Mac OS X</a> prior to Mac OS X v10.4</li>
+<li><a href="https://en.wikipedia.org/wiki/Upstart_(software)">Upstart</a>, a full replacement of init designed to start processes asynchronously. Initiated by <a href="https://en.wikipedia.org/wiki/Ubuntu_(operating_system)">Ubuntu</a> and used by them until 2014. It was also used in Fedora 9, Red Hat Enterprise Linux 6 and <a href="https://en.wikipedia.org/wiki/Google">Google</a>'s <a href="https://en.wikipedia.org/wiki/Chrome_OS">Chrome OS</a>.</li>
+</ul>
+<p>As of February 2019, systemd has been <a href="https://en.wikipedia.org/wiki/Systemd#Adoption_and_reception">adopted</a> by most major Linux distributions.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../../tech/notes/linux/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../../tech/notes/linux/capabilities.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../../tech/notes/linux/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../../tech/notes/linux/capabilities.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
